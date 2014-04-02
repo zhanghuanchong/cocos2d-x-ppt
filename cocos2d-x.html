@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>Cocos2d-x简介以及CocoaChina 2014春季开发者大会汇报</title>
+        
+        <meta name="description" content="Introduction of cocos2d-x" />
+        <meta name="author" content="Hans Zhang (ezburg@gmail.com)" />
+        
+        <link href="css/impress.css" rel="stylesheet" />
+        <link href="css/cocos2d-x.css" rel="stylesheet" />
+        
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+    <body class="impress-not-supported">
+        <div class="fallback-message">
+            <p>尊驾的浏览器太老土啦！<b>无法满足impress.js的要求</b>，现在你只能看到一些最朴素的演示画面。</p>
+            <p>为了欣赏漂亮的演示画面，请使用先进、优雅、快速、美丽、免费的现代浏览器，比如 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> 。</p>
+        </div>
+        <div id="impress" data-perspective="1000">
+
+            <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+                <span class="try">CocoaChina 2014春季开发者大会汇报</span>
+                <h1>Cocos2d-x简介</h1>
+                <span class="footnote"> <a href="#/family">Cocos2d家族</a> <a href="#/concept">基本概念及架构</a> <a href="#/samples">示例</a></span>
+            </div>
+
+            <div class="step" data-x="-2000" data-y="-1500">
+                <h1>什么是游戏引擎？</h1>
+                <p>为了简化游戏开发的流程，对一些常用的功能和模块进行封装，比如：</p>
+                <ul>
+                    <li>图像渲染</li>
+                    <li>物理引擎</li>
+                    <li>碰撞检测</li>
+                    <li>音效</li>
+                    <li>人工智能</li>
+                    <li>网络</li>
+                </ul>
+            </div>
+
+            <div class="step" data-x="-1000" data-y="-1500" data-rotate="90">
+                <div style="text-align:center"><img src="images/logo.png" /></div>
+                <q>Cocos2d-x是目前最流行的跨平台2D游戏引擎，<b>开源</b>，<b>免费</b>，MIT许可协议。</q>
+                <ul>
+                    <li>主要由触控科技支持。</li>
+                    <li>现在主要是2D，3D也即将推出。触控科技正在开发3D版的捕鱼达人。</li>
+                    <li>跨桌面、移动、Web三大平台。</li>
+                </ul>
+            </div>
+
+            <div class="step" data-x="0" data-y="-1500" data-rotate="90">
+                <img src="images/usage.png" alt=""/>
+            </div>
+
+            <div id="family" class="step" data-x="1000" data-y="-1500" data-rotate="90">
+                <h1>Cocos2d家族</h1>
+                <p><u>Cocos2d-python</u> => <u>Cocos2d-iphone</u> => <u>Cocos2d-x</u></p>
+                <img src="images/Cocos2dMaintainers.jpg" />
+            </div>
+
+            <div class="step" data-x="2000" data-y="-1500" data-rotate="90" data-scale="2" data-rotate-x="90">
+                <h1>主打三大产品</h1>
+                <p>array(<u>Cocos2d-x</u>, <u>Cocos2d-js</u>, <u>CocoStudio</u>);</p>
+            </div>
+
+            <div class="step" data-x="2500" data-y="-500" data-rotate="90">
+                <h1>Cocos2d-x</h1>
+                <ul>
+                    <li>利用已有的C++、Lua或者Javascript经验开发可以部署到各种桌面和移动平台上</li>
+                    <li>用C++最佳实践替换掉了objective-c模式</li>
+                    <li>3.0以上使用了大量的STL和C++11版的特性，如auto关键字、闭包(Lambda表达式)</li>
+                    <li>不能部署到浏览器中</li>
+                </ul>
+            </div>
+
+            <div class="step" data-x="2500" data-y="500" data-rotate="90">
+                <h1>Cocos2d-js</h1>
+                <ul>
+                    <li>Javascript版，使用原生Javascript提供了与Cocos2d-x完全相同的接口</li>
+                    <li>代码对比：
+                        <ul>
+                            <li><u>Cocos2d</u> => CCArray *array = CCArray::create(a, b);</li>
+                            <li><u>Cocos2d-x</u> => vector&lt;CCSprite *&gt; array(a, b);</li>
+                            <li><u>Cocos2d-js</u> => var array = [a, b];</li>
+                        </ul>
+                    </li>
+                    <li>全面支持桌面、移动和Web平台</li>
+                </ul>
+            </div>
+
+            <div class="step" data-x="2500" data-y="1500" data-rotate="90">
+                <h1>CocoStudio</h1>
+                <ul>
+                    <li>免费且专业的游戏开发工具包</li>
+                    <li>UI编辑器</li>
+                    <li>动画编辑器</li>
+                    <li>场景编辑器</li>
+                    <li>数据编辑器</li>
+                </ul>
+            </div>
+
+            <div class="step" data-x="1400" data-y="1600" data-rotate="180">
+                <img src="images/overview.png" alt=""/>
+            </div>
+
+            <div id="concept" class="step" data-x="100" data-y="1600" data-rotate="180">
+                <img src="images/cocos2d-x-architecture.jpg" alt=""/>
+            </div>
+
+            <div class="step" data-x="-900" data-y="1600" data-rotate="180">
+                <img src="images/jsbinding-3.jpg" alt=""/>
+            </div>
+
+            <div class="step" data-x="-2000" data-y="1600" data-rotate="180">
+                <img src="images/structure.png" alt=""/>
+            </div>
+
+            <div class="step" data-x="-3000" data-y="1000" data-rotate="270">
+                <h1>坐标系</h1>
+                <ul>
+                    <li>UI坐标系</li>
+                    <li>Direct3D使用左手笛卡尔坐标系</li>
+                    <li>Cocos2d使用与OpenGL相同的右手笛卡尔坐标系</li>
+                </ul>
+                <img src="images/ui-coordinate-system.jpeg" alt=""/>
+                <img src="images/left-right-handed-cartesian.png" alt=""/>
+            </div>
+
+            <div class="step" data-x="-3000" data-y="0" data-rotate="270">
+                <h1>Plugin-X</h1>
+                <p>易于集成第三方SDK:</p>
+                <ul>
+                    <li><u>Analytics SDKs</u> => Flurry, Google Analytics, Umeng</li>
+                    <li><u>IAP SDKs</u> => Apple IAP, ChinaMobileGameCenter, ChinaTelecom, ChinaUnicom, Alipay</li>
+                    <li><u>Ads SDKs</u> => AdMob, CharBoost, TapJoy</li>
+                    <li><u>Social SDKs</u> => GameCenter, OpenFeint, 91.com</li>
+                    <li><u>Sharing SDKs</u> => Facebook, Twitter, Weibo, ShareKit</li>
+                </ul>
+            </div>
+
+            <div id="samples" class="step" data-x="-3000" data-y="-1000" data-rotate="270">
+                <h1>示例</h1>
+                <ul>
+                    <li>Cocos2d-x</li>
+                    <li>Cocos2d-html</li>
+                    <li>Quick-x</li>
+                </ul>
+            </div>
+
+            <div id="overview" class="step" data-x="0" data-y="0" data-scale="10">
+            </div>
+        </div>
+        <div class="hint">
+            <p>使用空格或者方向键来移动</p>
+        </div>
+        <script>
+        if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>向左或向右拖动屏幕来移动</p>";
+        }
+        </script>
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+        <!--
+        
+        `impress()` 函数给了你一个控制演示API的方法。
+        
+        把结果放在一个变量里：
+        
+        var api = impress();
+        
+        这样你就可以使用几个可以使用的方法：
+        
+        `api.init()` - 初始化演示；
+        `api.next()` - 播放下一个幻灯片；
+        `api.prev()` - 回到上一个幻灯片；
+        `api.goto( idx | id | element, [duration] )` - 通过知道那个id或者DOM播放指定的幻灯片
+        可以指定转换时间（单位毫秒），当然时间可以是缺省的。
+        
+        你可以随时再次调用`impress()`来再一次获得这个API，类似`impress().next()`当然也是可以的。
+        不用担心，这不会再一次的初始化impress。
+        
+        -->
+    </body>
+</html>
